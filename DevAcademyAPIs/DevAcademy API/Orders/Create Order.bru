@@ -1,0 +1,23 @@
+meta {
+  name: Create Order
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/api/orders
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+}
+
+body:json {
+  {
+    "shippingAddress": "123 Main St, City, Country",
+    "paymentMethod": "credit_card"
+  }
+}
