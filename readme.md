@@ -353,8 +353,8 @@ To run all the tests, we can run below command from root directory of the projec
 
 1. Clone the repository
 2. Install dependencies: `npm install`
-5. Start the development server: `npm run dev`
-6. Run tests: `npm test`
+5. Start the development server: `npm run dev` or simply ```node server.js```
+6. Run tests: `npx jest --config=jest.config.js --runInBand`
 
 **Note:** The Database of choise is Azure SQL Database hosted in my subscription. Since it is dev, I am setting it to Auto "Pause". So in case above doesn't work, it is likely that the DB is in paused state, and will need to be manually "Started".
 
@@ -364,3 +364,7 @@ To run all the tests, we can run below command from root directory of the projec
 I have used Javascript and its framework instead of C# and .NET core due to time constraints and my existing familiarity with Javascript. However, regardless of the programming language used, I have used alternatives frameworks that get the job done in the same way as the .NET framework (Example, using Sequelize ORM instead of EF Core, etc...)
 
 Next step for me is to re-factor this project to C# and .NET so I can learn the language by doing. Additionally, I will practice nextjs by creating a beautiful UI for this backend.
+
+In case you try to run this project and it doesn't start due to database being in "Pause", please reach out and I will start it for you. Alternatively, if you have a localdb, please do update the env variables or the db.js file with your own db, I have included a script that will create the tables directly on server start.
+
+If any further info/clarification on implementation of any of the features is required, please let me know.
